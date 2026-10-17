@@ -17,9 +17,6 @@ To run the script from anywhere on your system, you can place it in your local b
 Run the following commands in your terminal:
 ```sh
 sudo cp count_lines /usr/local/bin/
-```
-And don't forget to make the script executable:
-```sh
 sudo chmod +x /usr/local/bin/count_lines
 ```
 
