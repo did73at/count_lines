@@ -9,23 +9,21 @@ This script analyzes C source files and counts the number of lines for each func
 ## Installation
 
 You can get the script by cloning the repository or by executing the following command:
-```bash
-curl https://raw.githubusercontent.com/did73at/count_lines/main/count_lines
+```sh
+curl https://raw.githubusercontent.com/did73at/count_lines/blob/main/count_lines
 ```
 
-> To run the script from anywhere on your system, you can place it in your local binaries directory (`/usr/local/bin`).
-> 
-> Run the following commands in your terminal (assuming you already download the script:
+To run the script from anywhere on your system, you can place it in your local binaries directory (`/usr/local/bin`).
+Run the following commands in your terminal:
+```sh
+sudo cp count_lines /usr/local/bin/
+```
+And don't forget to make the script executable:
+```sh
+sudo chmod +x /usr/local/bin/count_lines
+```
 
-> ```bash
-> sudo cp count_lines /usr/local/bin/
-> ```
-> And don't forget to make the script executable:
-> ````bash
-> sudo chmod +x /usr/local/bin/count_lines
-> ```
-
-# Usage
+## Usage
 The script accepts an optional line limit as its first argument, followed by any number of .c files.
 ```sh
 count_lines [N] <file1.c> [file2.c] ...
@@ -33,7 +31,7 @@ count_lines [N] <file1.c> [file2.c] ...
 - `N` *(optional)*: The maximum allowed number of lines per function. If not specified, the default value is 30.
 - `<file.c>`: An unlimited number of C source files to analyze.
 
-# Example Output
+## Output
 Running the script will output the filename, followed by each function's signature and its line count.
 If a function's line count strictly exceeds the limit N, its output will be displayed in red. 
 
