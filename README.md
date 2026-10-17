@@ -10,7 +10,7 @@ This script analyzes C source files and counts the number of lines for each func
 
 You can get the script by cloning the repository or by executing the following command:
 ```sh
-curl https://raw.githubusercontent.com/did73at/count_lines/blob/main/count_lines
+curl --remote-name https://raw.githubusercontent.com/did73at/count_lines/refs/heads/main/count_lines
 ```
 
 To run the script from anywhere on your system, you can place it in your local binaries directory (`/usr/local/bin`).
