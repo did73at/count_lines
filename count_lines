@@ -15,10 +15,10 @@ lines_count() {
             if [ $n -gt 30 ]; then
                 ERROR_COUNT=$((ERROR_COUNT + 1))
                 echo "\033[31m$FUN"
-                echo ">> $n lines"
+                echo "\033[0m>> $n lines"
             else
-                echo "$FUN"
-                echo ">> $n lines"
+                echo "\033[32m$FUN"
+                echo "\033[0m>> $n lines"
             fi
             echo "\033[0m"
             n=0
@@ -29,7 +29,7 @@ lines_count() {
 for i in "$@"; do
     a="|     $i     |"
     b="$(echo "$a" | tr "a-z_. |" "-")"
-    echo "\033[32m$b"
+    echo "\033[34m$b"
     echo "$a"
     echo "$b"
     echo "\033[0m"
