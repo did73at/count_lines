@@ -11,7 +11,7 @@ lines_count() {
             n="$line"
         else
             FUN="$(cat "$1" | head -n "$((n - 1))" | tail -n 1)"
-            n="$(cat "$1" | head -n "$line" | tail -n $((line + 1 - n)) | grep -E "^[ ]+[^ +-/|&*%].*[);]$" | wc -l)"
+            n="$(cat "$1" | head -n "$line" | tail -n $((line + 1 - n)) | grep -E "^[ ]+[^ +-/|&*%].*[);]( /[/*].*)$" | wc -l)"
             if [ $n -gt 30 ]; then
                 ERROR_COUNT=$((ERROR_COUNT + 1))
                 echo "\033[31m$FUN"
